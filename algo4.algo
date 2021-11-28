@@ -1,0 +1,16 @@
+ALGORITHM Insertion Sort 
+VAR
+    A=ARRAY_OF INTEGER[n];
+    n,x,i,j=INTEGER;
+BEGIN
+    n:=A.length-1;
+    FOR i FROM 1 TO n STEP 1  DO
+        x:=A[i];
+        j:=i-1;
+        WHILE (j >= 0 AND A[j] > x) DO
+            A[j+1]:=A[j];
+            j:=j-1;
+        END_WHILE
+        A[j+1]:=x;
+    END_FOR
+END
